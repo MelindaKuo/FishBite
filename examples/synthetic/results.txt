@@ -1,0 +1,64 @@
+======================================================================
+examples/synthetic/session_1oz.csv
+18006 samples, 6 markers, sample_hz=100
+
+score (amplitude)  window=-15000ms/+2000ms
+  bite markers          : 3
+  true positives        : 3
+  missed bites          : 0  []
+  false positives (near known false-trigger) : 0
+  false positives (unexplained)               : 0
+
+score (highpass)  window=-15000ms/+2000ms
+  bite markers          : 3
+  true positives        : 3
+  missed bites          : 0  []
+  false positives (near known false-trigger) : 0
+  false positives (unexplained)               : 0
+
+score (jerk)  window=-15000ms/+2000ms
+  bite markers          : 3
+  true positives        : 3
+  missed bites          : 0  []
+  false positives (near known false-trigger) : 0
+  false positives (unexplained)               : 0
+
+score (periodicity_reject)  window=-15000ms/+2000ms
+  bite markers          : 3
+  true positives        : 3
+  missed bites          : 0  []
+  false positives (near known false-trigger) : 0
+  false positives (unexplained)               : 0
+
+======================================================================
+examples/synthetic/session_4oz.csv
+18006 samples, 6 markers, sample_hz=100
+
+score (amplitude)  window=-15000ms/+2000ms
+  bite markers          : 3
+  true positives        : 3
+  missed bites          : 0  []
+  false positives (near known false-trigger) : 0
+  false positives (unexplained)               : 0
+
+score (highpass)  window=-15000ms/+2000ms
+  bite markers          : 3
+  true positives        : 3
+  missed bites          : 0  []
+  false positives (near known false-trigger) : 0
+  false positives (unexplained)               : 0
+
+score (jerk)  window=-15000ms/+2000ms
+  bite markers          : 3
+  true positives        : 3
+  missed bites          : 0  []
+  false positives (near known false-trigger) : 0
+  false positives (unexplained)               : 0
+
+score (periodicity_reject)  window=-15000ms/+2000ms
+  bite markers          : 3
+  true positives        : 3
+  missed bites          : 0  []
+  false positives (near known false-trigger) : 0
+  false positives (unexplained)               : 0
+
