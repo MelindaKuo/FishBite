@@ -241,7 +241,8 @@ void updateOrientationSmoothing(float axg, float ayg, float azg) {
   if (!orient.accInit) {
     orient.sax = axg; orient.say = ayg; orient.saz = azg;
     orient.accInit = true;
-  } else {
+  }
+  else {
     orient.sax += aAlpha * (axg - orient.sax);
     orient.say += aAlpha * (ayg - orient.say);
     orient.saz += aAlpha * (azg - orient.saz);
@@ -278,12 +279,14 @@ bool checkRepositioning(uint32_t now, float tiltDeg, bool tilted, bool settled) 
   if (tilted && settled) {
     if (orient.offSince == 0) {
       orient.offSince = now;
-    } else if (now - orient.offSince >= ORIENT_HOLD_MS) {
+    }
+    else if (now - orient.offSince >= ORIENT_HOLD_MS) {
       Serial.printf("Rod moved %.1f deg - auto-recal\n", tiltDeg);
       recalibrate(now, "orientation");
       return true;
     }
-  } else {
+  }
+  else {
     orient.offSince = 0;
   }
   return false;
@@ -386,7 +389,8 @@ void serviceBeeps(uint32_t now) {
     digitalWrite(BUZZER_PIN, LOW);
     buzzerOn = false;
     beepToggleAt = now + beepOffMs;
-  } else if (beepsPending > 0) {
+  }
+  else if (beepsPending > 0) {
     digitalWrite(BUZZER_PIN, HIGH);
     buzzerOn = true;
     beepToggleAt = now + beepOnMs;
@@ -489,7 +493,8 @@ void loop() {
     bool strong = (combined > STRONG_SCORE);
     if (strong) {
       startBeeps(3, 120, 100);
-    } else {
+    }
+    else {
       startBeeps(1, 350, 0);
     }
 

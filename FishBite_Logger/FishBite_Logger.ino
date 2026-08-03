@@ -74,7 +74,8 @@ class MarkerWriteCallbacks : public BLECharacteristicCallbacks {
     if (b == 1 || b == '1') {
       g_pendingMarkerType = MARKER_BITE;
       g_pendingMarkerAtMs = millis();
-    } else if (b == 2 || b == '2') {
+    }
+    else if (b == 2 || b == '2') {
       g_pendingMarkerType = MARKER_FALSE_TRIGGER;
       g_pendingMarkerAtMs = millis();
     }
@@ -169,15 +170,18 @@ void handleSerialCommands() {
         if (strcmp(buf, "start") == 0) {
           g_loggingActive = true;
           printCsvHeader(millis());
-        } else if (strcmp(buf, "stop") == 0) {
+        }
+        else if (strcmp(buf, "stop") == 0) {
           g_loggingActive = false;
           Serial.println("# stopped");
-        } else {
+        }
+        else {
           Serial.printf("# unknown command: %s\n", buf);
         }
         len = 0;
       }
-    } else if (len < sizeof(buf) - 1) {
+    }
+    else if (len < sizeof(buf) - 1) {
       buf[len++] = c;
     }
   }
